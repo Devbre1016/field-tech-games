@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Field Tech: The Cylinder Set (HD preview)</title>
+<style>:root{--orange:#ff7a00;--yellow:#ffc400;--dark:#1f2328;--panel:rgba(18,22,28,.74);--paper:#fffaf0}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;height:100%;overflow:hidden;background:#9fc4e4;font-family:Trebuchet MS,Segoe UI,Arial,sans-serif;user-select:none;-webkit-user-select:none;touch-action:none}canvas#c{position:fixed;inset:0;width:100%;height:100%;display:block}.hidden{display:none!important}button{font-family:inherit}.panel{background:var(--panel);color:#fff;border-radius:10px;padding:8px 12px;border-bottom:3px solid var(--orange)}#tasks{position:fixed;top:10px;left:10px;z-index:5;pointer-events:auto;max-width:330px;font-size:14px}#tasks .ttl{font-size:11px;letter-spacing:1.5px;color:var(--yellow);font-weight:700;display:flex;justify-content:space-between;cursor:pointer}#tasks ul{list-style:none;margin:6px 0 0;padding:0}#tasks li{padding:3px 0 3px 24px;position:relative;color:#c9ced4;line-height:1.25}#tasks li:before{content:"\2610";position:absolute;left:2px;top:2px;color:#8a939c}#tasks li.cur{color:#fff;font-weight:700}#tasks li.cur:before{content:"\25b6";color:var(--yellow)}#tasks li.done{color:#8fd694;text-decoration:line-through;text-decoration-color:#8fd69480}#tasks li.done:before{content:"\2714";color:#5fd06a}#tasks li.skip{color:#e0a96b}#tasks li.skip:before{content:"\2013";color:#e0a96b}#tasks.collapsed ul{display:none}#clock{position:fixed;top:10px;right:66px;z-index:5;text-align:right;min-width:150px}#clock .lbl{font-size:11px;letter-spacing:1.5px;color:var(--yellow);font-weight:700}#clock .val{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}#sampleAge{font-size:13px;margin-top:2px;font-variant-numeric:tabular-nums}#sampleAge.warn{color:#ffb36b}#sampleAge.bad{color:#ff6a5a}#btnMute{position:fixed;top:10px;right:10px;z-index:30;width:46px;height:44px;padding:0;font-size:21px}#cross{position:fixed;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#fff;box-shadow:0 0 0 2px #00000080;z-index:4;pointer-events:none}#prompt{position:fixed;left:50%;bottom:13%;transform:translate(-50%);z-index:5;pointer-events:none;text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center}.pr{background:var(--panel);color:#fff;padding:8px 16px;border-radius:10px;font-size:19px;font-weight:700;white-space:nowrap;border-bottom:3px solid var(--orange)}.pr.altp{font-size:15px;border-bottom-color:#7a8691;font-weight:400}kbd{background:#ffc400;color:#1f2328;border-radius:5px;padding:1px 8px;font-family:inherit;font-size:15px;font-weight:700;box-shadow:0 2px #8a6a00;margin-right:6px}.pr.altp kbd{background:#d6dbe0;box-shadow:0 2px #6b7178}#objective{position:fixed;left:50%;top:10px;transform:translate(-50%);z-index:5;pointer-events:none;font-size:15px;font-weight:700;white-space:nowrap}#objective .d{color:var(--yellow);margin-left:8px}#work{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:5;width:250px;pointer-events:none}#work .lbl{font-size:11px;letter-spacing:1.5px;color:var(--yellow);font-weight:700}#work .big{font-size:52px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;margin:4px 0}#work .big small{font-size:20px;color:#aab3bb}#work .big.ok{color:#6fe07a}#work .big.over{color:#ff6a5a}#work .tip{font-size:13px;color:#d7dde2;line-height:1.3}#workMolds{display:flex;gap:6px;margin:8px 0}.wm{flex:1;height:30px;border-radius:4px;background:#2a3038;border:2px solid #4b545e;position:relative;overflow:hidden;font-size:11px;text-align:center;line-height:26px;color:#fff;font-weight:700}.wm i{position:absolute;left:0;right:0;bottom:0;background:#8f8d88}.wm span{position:relative}.wm.cur{border-color:var(--yellow)}.wm.done{border-color:#5fd06a}#bar{position:fixed;left:50%;bottom:28%;transform:translate(-50%);width:320px;z-index:5;pointer-events:none}#bar .lbl{font-size:12px;letter-spacing:1px;color:var(--yellow);font-weight:700;margin-bottom:4px;display:flex;justify-content:space-between}#bar .track{height:16px;background:#333;border-radius:8px;overflow:hidden;position:relative;border:1px solid #000}#bar .fill{height:100%;width:0;background:linear-gradient(90deg,#9a9893,#c8c6c0)}#bar .zone{position:absolute;top:0;bottom:0;background:#5fd06a59;border-left:2px solid #5fd06a;border-right:2px solid #5fd06a}#toast{position:fixed;top:24%;left:50%;transform:translate(-50%);z-index:6;pointer-events:none;text-align:center;width:92%}.toastMsg{font-size:26px;font-weight:900;color:#fff;text-shadow:0 3px 0 #000,0 0 12px rgba(0,0,0,.6);animation:pop .25s ease-out;margin:4px 0}.toastMsg.bad{color:#ff6a5a}.toastMsg.good{color:#ffd23a}.toastMsg.info{font-size:18px;font-weight:700}@keyframes pop{0%{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}.btn{pointer-events:auto;cursor:pointer;border:none;border-radius:10px;background:var(--orange);color:#fff;font-weight:700;font-size:17px;padding:10px 18px;box-shadow:0 4px #b04f00}.btn:active{transform:translateY(3px);box-shadow:0 1px #b04f00}.btn.alt{background:#2d3640;box-shadow:0 4px #11161b}.btn.green{background:#2f9e44;box-shadow:0 4px #1d6a2c}.btn.red{background:#d6362b;box-shadow:0 4px #8a1d15}.overlay{position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;background:#0f141a8c;padding:12px}.card{background:var(--paper);border-radius:16px;max-width:600px;width:100%;padding:20px 24px;box-shadow:0 12px 40px #00000073;border-top:10px solid var(--orange);position:relative;max-height:100%;overflow-y:auto}.card:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(45deg,#1f2328 0 14px,var(--yellow) 14px 28px)}.card h1{margin:10px 0 2px;font-size:34px;line-height:1.05;color:var(--dark)}.card h1 span{color:var(--orange)}.card .sub{color:#6b5b45;margin-bottom:12px;font-size:15px}.card h3{margin:12px 0 6px;font-size:15px;color:#6b5b45;letter-spacing:1px;text-transform:uppercase}.controls{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;color:#333;margin:8px 0 14px}.controls kbd{background:#2d3640;color:#fff;box-shadow:0 2px #000;font-size:13px}.goal{background:#fff1d6;border-left:5px solid var(--yellow);padding:8px 12px;border-radius:6px;font-size:14px;color:#4a3b22;margin-bottom:12px;line-height:1.4}.ticket{background:#fdfcf6;font-family:Courier New,monospace;color:#222;max-width:420px;width:100%;padding:16px 18px;border-radius:4px;box-shadow:0 10px 30px #00000080;background-image:repeating-linear-gradient(#fdfcf6 0 23px,#e8eef6 23px 24px);transform:rotate(-1deg);max-height:100%;overflow-y:auto}.ticket h2{margin:0;font-size:20px;text-align:center;letter-spacing:2px}.ticket .co{text-align:center;font-size:12px;margin-bottom:8px}.ticket table{width:100%;font-size:14px;border-collapse:collapse}.ticket td{padding:2px 0}.ticket td:last-child{text-align:right;font-weight:700}.ticket .hl{background:#fff3a8}.ticket .q{font-family:Trebuchet MS,Arial,sans-serif;font-size:14px;margin:12px 0 8px;color:#333}.ticket .row{display:flex;gap:8px;flex-wrap:wrap}.ticket .btn{font-size:15px;flex:1}.grade{font-size:64px;font-weight:900;color:var(--orange);line-height:1}.stats{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:15px;margin:8px 0}.stats b{text-align:right;font-variant-numeric:tabular-nums}.fb{margin:4px 0;padding:0 0 0 20px;font-size:14px;line-height:1.4}.fb li.good{color:#1d6a2c}.fb li.bad{color:#a8261d}#touch{position:fixed;inset:0;z-index:4;pointer-events:none}#joy{position:absolute;left:18px;bottom:18px;width:150px;height:150px;border-radius:50%;background:#ffffff24;border:2px solid rgba(255,255,255,.35);pointer-events:auto;touch-action:none}#knob{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#ffc400cc;border:2px solid #fff}#tAct{position:absolute;right:20px;bottom:26px;width:96px;height:96px;border-radius:50%;font-size:16px;padding:0;pointer-events:auto;touch-action:none;line-height:1.1}#tAlt{position:absolute;right:126px;bottom:30px;min-width:86px;height:56px;border-radius:28px;font-size:14px;padding:0 12px;pointer-events:auto;touch-action:none}#tLook{position:absolute;right:20px;bottom:136px;font-size:12px;color:#fffc;text-shadow:0 1px 2px #000}#lockHint{position:fixed;left:50%;top:56%;transform:translate(-50%);z-index:5;pointer-events:none;color:#fff;font-size:14px;text-shadow:0 1px 3px #000}@media(max-width:700px),(max-height:500px){#tasks{font-size:12px;max-width:230px;padding:6px 9px}#tasks li{padding:2px 0 2px 20px}#clock{min-width:0;padding:6px 9px}#clock .val{font-size:16px}#sampleAge{font-size:11px}#objective{top:auto;bottom:calc(100% - 50px);font-size:12px;display:none}#work{width:190px;right:8px;top:64px;transform:none;padding:6px 10px}#work .big{font-size:38px}#work .tip{font-size:11px}.pr{font-size:15px}.pr.altp{font-size:12px}#prompt{bottom:auto;top:62%}.card{padding:14px 16px}.card h1{font-size:24px}#bar{width:240px;bottom:auto;top:40%}.toastMsg{font-size:20px}}@media(orientation:portrait)and (max-width:600px){#tasks{max-width:46%}#clock{right:62px}#work{inset:auto auto 150px 8px;width:200px}#rotHint{display:block!important}}#ld{margin:6px 0 12px}#ld .tr{height:12px;border-radius:6px;background:#e6dcc8;overflow:hidden;border:1px solid #c9b994}#ldFill{height:100%;width:0;background:linear-gradient(90deg,#ff7a00,#ffc400);transition:width .2s}#ldTxt{font-size:13px;color:#6b5b45;margin-top:4px}#ld.done .tr{display:none}.qrow{display:flex;align-items:center;gap:8px;font-size:13px;color:#6b5b45;margin:0 0 10px;flex-wrap:wrap}.qrow button{border:2px solid #2d3640;background:#fff;color:#2d3640;border-radius:8px;padding:4px 12px;font-weight:700;cursor:pointer;font-family:inherit}.qrow button.on{background:#2d3640;color:#fff}#btnStart:disabled{opacity:.6;cursor:wait}#rotHint{display:none;position:fixed;left:50%;top:62px;transform:translate(-50%);z-index:5;font-size:12px;color:#fff;background:#00000073;padding:3px 10px;border-radius:8px;pointer-events:none;white-space:nowrap}body.touch #prompt kbd,body.touch #cross{display:none}body.touch.walk #cross{display:block}</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="cross" class="hidden"></div>
+<div id="tasks" class="panel hidden"><div class="ttl"><span>JOB: CYLINDER SET · TICKET 48213</span><span id="tasksTog">▾</span></div><ul id="taskList"></ul></div>
+<div id="clock" class="panel hidden"><div class="lbl">SITE TIME</div><div class="val" id="clockVal">2:14 PM</div><div id="sampleAge"></div></div>
+<div id="objective" class="panel hidden"></div>
+<div id="prompt"></div>
+<div id="work" class="panel hidden"></div>
+<div id="bar" class="panel hidden"><div class="lbl"><span id="barLbl">LOAD DISCHARGED</span><span id="barVal">0%</span></div><div class="track"><div class="zone" id="barZone"></div><div class="fill" id="barFill"></div></div></div>
+<div id="toast"></div>
+<div id="rotHint">↻ Turn your phone sideways for the best view</div>
+<div id="lockHint" class="hidden">Click to look around (mouse look)</div>
+<button class="btn alt" id="btnMute" title="Mute (M)">🔊</button>
+<div id="touch" class="hidden">
+  <div id="joy"><div id="knob"></div></div>
+  <div id="tLook">drag right side to look</div>
+  <button class="btn alt hidden" id="tAlt">Done</button>
+  <button class="btn" id="tAct">USE</button>
+</div>
+
+<div class="overlay" id="ovTitle">
+  <div class="card">
+    <h1>FIELD TECH: <span>THE CYLINDER SET</span></h1>
+    <div class="sub">HD preview · Riverside Medical Center, slab-on-grade pour</div>
+    <div class="goal">You're the CMT field technician on site. The ready-mix truck just pulled up. Grab your gear, check the ticket, sample the load, and cast a set of <b>four 4×8 cylinders</b> the right way: <b>2 layers</b>, <b>25 rod strokes</b> per layer, <b>10–15 mallet taps</b> per layer, strike off, cap &amp; label, then put them in the curing box.</div>
+    <h3>Controls</h3>
+    <div class="controls" id="ctlDesk">
+      <kbd>W A S D</kbd><span>Walk (arrow keys work too)</span>
+      <kbd>Mouse</kbd><span>Look around (click the game to capture the mouse, Esc to release)</span>
+      <kbd>E / Click</kbd><span>Use / interact · rod / tap / scoop</span>
+      <kbd>Q / Enter</kbd><span>Done with this step · skip optional step</span>
+      <kbd>M</kbd><span>Mute sound</span>
+    </div>
+    <div class="controls hidden" id="ctlTouch">
+      <kbd>Left stick</kbd><span>Walk</span>
+      <kbd>Drag right side</kbd><span>Look around</span>
+      <kbd>USE button</kbd><span>Interact · rod / tap / scoop (or tap the screen while working)</span>
+      <kbd>Done button</kbd><span>Finish a step · skip optional step</span>
+    </div>
+    <div id="ld"><div class="tr"><div id="ldFill"></div></div><div id="ldTxt">Loading job site…</div></div>
+    <div class="qrow">Graphics: <button id="qHigh">High</button><button id="qLow">Low (smoother on older phones)</button></div>
+    <button class="btn green" id="btnStart" style="width:100%;font-size:20px" disabled>LOADING…</button>
+  </div>
+</div>
+
+<div class="overlay hidden" id="ovTicket">
+  <div class="ticket">
+    <h2>DELIVERY TICKET</h2>
+    <div class="co">TRI-COUNTY READY MIX · Plant 3 · Truck 27</div>
+    <table>
+      <tr><td>Ticket No.</td><td>48213</td></tr>
+      <tr><td>Project</td><td>Riverside Med. Ctr</td></tr>
+      <tr><td>Placement</td><td>SOG Area B</td></tr>
+      <tr class="hl"><td>Mix ID</td><td>4000-S-34A</td></tr>
+      <tr><td>Design strength</td><td>4,000 psi @ 28 d</td></tr>
+      <tr><td>Agg / Air</td><td>3/4" stone · 6% ±1.5</td></tr>
+      <tr><td>Slump spec</td><td>4" ±1"</td></tr>
+      <tr><td>This load / total</td><td>10.0 / 40.0 CY</td></tr>
+      <tr class="hl"><td>Time batched</td><td>1:47 PM</td></tr>
+      <tr><td>Arrived on site</td><td>2:09 PM</td></tr>
+      <tr><td>Water added on site</td><td>0 gal</td></tr>
+    </table>
+    <div class="q">It's <b id="tkNow">2:14 PM</b>. Spec says discharge within 90 minutes of batching. Accept the load and sample it?</div>
+    <div class="row"><button class="btn green" id="tkAccept">✔ Accept &amp; sample</button><button class="btn red" id="tkReject">✖ Reject load</button></div>
+  </div>
+</div>
+
+<div class="overlay hidden" id="ovResult">
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:18px"><div class="grade" id="rGrade">A</div><div><h1 style="margin:6px 0 0">SET <span>COMPLETE</span></h1><div class="sub" id="rSub"></div></div></div>
+    <div class="stats" id="rStats"></div>
+    <h3>Feedback</h3>
+    <ul class="fb" id="rFb"></ul>
+    <button class="btn green" id="btnAgain" style="width:100%;margin-top:10px">CAST ANOTHER SET ↻</button>
+  </div>
+</div>
+
+<script>window.__MANIFEST={"assets/lib/basis_transcoder.js":57529,"assets/lib/basis_transcoder.wasm":527333,"assets/models/barrier.glb":140208,"assets/models/block.glb":143908,"assets/models/bucket.glb":262032,"assets/models/cabins.glb":608512,"assets/models/cone.glb":162320,"assets/models/drum.glb":249548,"assets/models/dumpster.glb":393464,"assets/models/excavator.glb":1040444,"assets/models/frame.glb":1077072,"assets/models/hauler.glb":967812,"assets/models/hoarding.glb":505024,"assets/models/mixer.glb":2813220,"assets/models/pallet.glb":226788,"assets/models/pallet_load.glb":275072,"assets/models/pickup.glb":934072,"assets/models/wheelbarrow.glb":476492,"assets/models/worker.glb":628044,"assets/tex/conc_arm.webp":14486,"assets/tex/conc_diff.webp":126236,"assets/tex/conc_nor.webp":36504,"assets/tex/gravel_arm.webp":10142,"assets/tex/gravel_diff.webp":223142,"assets/tex/gravel_nor.webp":66264,"assets/tex/ground_arm.webp":86816,"assets/tex/ground_diff.webp":221018,"assets/tex/ground_nor.webp":424554,"assets/tex/mud_arm.webp":39732,"assets/tex/mud_diff.webp":128972,"assets/tex/mud_nor.webp":86548,"assets/tex/ply_diff.webp":24432,"assets/tex/sky_bg.webp":108112,"assets/tex/sky_bg_low.webp":37342,"assets/tex/sky_env.hdr":524337}</script><script type="module" src="game.js?v=mwnt2517"></script>
+</body>
+</html>
