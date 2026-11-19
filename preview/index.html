@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:,"><title>Dump Truck Model Preview</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#1d2329;color:#eee;font-family:system-ui,-apple-system,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
+#app{display:flex;flex-direction:column;height:100dvh;height:100vh}
+@supports(height:100dvh){#app{height:100dvh}}
+header{display:flex;align-items:center;gap:10px;padding:calc(8px + env(safe-area-inset-top)) 12px 8px;background:#1d2329}
+header a{color:#f5b800;text-decoration:none;font-size:22px;line-height:1}
+header h1{font-size:16px;margin:0;color:#f5b800;flex:1}
+#spin{background:#2c353d;color:#bbb;border:0;border-radius:8px;padding:6px 10px;font-size:13px}#spin.on{color:#1d2329;background:#f5b800}
+#view{position:relative;flex:1;min-height:0;touch-action:none}
+#view canvas{display:block;width:100%;height:100%}
+#loading{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-weight:600;color:#1d2329;pointer-events:none}
+#loading span{background:#f5b800cc;padding:8px 14px;border-radius:20px}
+#hint{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:12px;color:#1d2329aa;pointer-events:none}
+#tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px 4px;scrollbar-width:none}#tabs::-webkit-scrollbar{display:none}
+#tabs button{flex:0 0 auto;border:0;border-radius:18px;padding:9px 14px;font-size:14px;font-weight:600;background:#2c353d;color:#ddd}
+#tabs button.on{background:#f5b800;color:#1d2329}
+#info{padding:6px 14px calc(12px + env(safe-area-inset-bottom))}
+#name{font-size:18px;font-weight:700}#style{color:#f5b800;font-size:13px;margin-top:2px}
+#stats{font-size:13px;color:#aab;margin-top:4px}#credit{font-size:12px;color:#99a;margin-top:6px;line-height:1.5}
+#credit a{color:#9cc8ff}
+</style></head><body><div id="app">
+<header><a href="../" aria-label="Back">‹</a><h1>Dump Truck Model Preview</h1><button id="spin" class="on">Auto-spin</button></header>
+<div id="view"><div id="loading"><span>Loading model…</span></div><div id="hint">Drag to rotate · pinch to zoom</div></div>
+<div id="tabs"></div>
+<div id="info"><div id="name"></div><div id="style"></div><div id="stats"></div><div id="credit"></div></div>
+</div>
+<script>window.MODELS=[{"file":"grab3d.glb","short":"Tri-Axle","name":"Tri-Axle Dump Truck","style":"Clean stylized, textured (game-ready)","author":"Grab3D (Cozy Vehicles Kit)","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/","source":"https://grab3d.com/models/vehicles/dump-truck/","bytes":438544},{"file":"tevy.glb","short":"Articulated","name":"Articulated Hauler","style":"Detailed, dusty PBR textures","author":"tevy","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/","source":"https://tevy.dev/models/dump-truck","bytes":967812},{"file":"inner.glb","short":"Heavy Duty","name":"Heavy Dump Truck","style":"Most detailed, realistic parts","author":"Innerscene","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/","source":"https://www.innerscene.com/tools/library/3d-parts/dump-truck-8fbb9f8c","bytes":890012},{"file":"pp-jeremy.glb","short":"Low-Poly","name":"Low-Poly Dump Truck","style":"Simple low-poly, flat colors","author":"jeremy (via Poly Pizza)","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0/","source":"https://poly.pizza/m/1BpGYg14QGD","note":"Credit required if used","bytes":29724},{"file":"mixer.glb","short":"Mixer (bonus)","name":"Concrete Mixer Truck","style":"Bonus: stylized, same kit as Tri-Axle","author":"Grab3D (Cozy Vehicles Kit)","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/","source":"https://grab3d.com/models/vehicles/concrete-mixer-truck/","bytes":348688}];</script>
+<script type="module" src="app.js"></script>
+</body></html>
