@@ -15,10 +15,23 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/field-tech-games/shift/assets/index-B-De9VyM.js"></script>
-    <link rel="stylesheet" crossorigin href="/field-tech-games/shift/assets/index-IS3NLhfY.css">
+    <link rel="stylesheet" href="assets/index-IS3NLhfY.css">
   </head>
   <body>
     <div id="root"></div>
+    <script type="module">
+      const n = 11;
+      const parts = [];
+      for (let i = 0; i < n; i++) {
+        const res = await fetch("assets/b" + i + ".b64");
+        if (!res.ok) throw new Error("part " + i);
+        parts.push(await res.text());
+      }
+      const bin = atob(parts.join("").replace(/\s/g, ""));
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const blob = new Blob([bytes], { type: "text/javascript" });
+      await import(URL.createObjectURL(blob));
+    </script>
   </body>
 </html>
